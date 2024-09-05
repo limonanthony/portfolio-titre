@@ -145,7 +145,14 @@ export default function AboutElement() {
           <span>CV</span>
         </Button>
         {/* eslint-disable-next-line jsx-a11y/anchor-has-content,jsx-a11y/control-has-associated-label */}
-        <a className="hidden" download={cvRef} href={CvPdf} ref={cvRef} rel="noreferrer" target="_blank" />
+        <a
+          className="hidden"
+          download="CV-Anthony-Limon.pdf"
+          href={CvPdf}
+          ref={cvRef}
+          rel="noreferrer"
+          target="_blank"
+        />
       </Box>
     </Element>
   );
