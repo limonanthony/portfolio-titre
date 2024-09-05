@@ -1,0 +1,7 @@
+/scripts
+/src/types/api/
+tailwind.config.js
+postcss.config.js
+babel.config.js
+webpack.config.js
+vite.config.ts

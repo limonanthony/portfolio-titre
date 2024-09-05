@@ -1,0 +1,22 @@
+.mouse-image {
+    svg {
+        path {
+            animation-name: moveMouseButtonDown;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-out;
+            animation-duration: 1.25s;
+
+        }
+    }
+}
+
+@keyframes moveMouseButtonDown {
+    0% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(8px);
+        opacity: 0;
+    }
+}

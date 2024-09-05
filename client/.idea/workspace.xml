@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff67b88e-7cfd-43a8-b678-6fe291347ac6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/test-screenshot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/elements/ProjectsElement.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/elements/ProjectsElement.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/cards/Project.card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/cards/Project.card.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/data/projects.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/data/projects.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vite/deps_temp_eb124d1b/package.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +127,7 @@
       <workItem from="1725460968986" duration="153000" />
       <workItem from="1725461127409" duration="3507000" />
       <workItem from="1725468671315" duration="4524000" />
-      <workItem from="1725473210786" duration="5298000" />
+      <workItem from="1725473210786" duration="5754000" />
     </task>
     <servers />
   </component>
