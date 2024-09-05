@@ -13,6 +13,7 @@ val envModule = module {
                 port = getRequiredEnv(EnvKey.API_PORT).toInt()
             )
         } catch (e: Exception) {
+            println("Error")
             println(e.message)
             throw e
         }
@@ -24,6 +25,7 @@ val envModule = module {
                 environment = EnvironmentType.fromValue(getRequiredEnv(EnvKey.APPLICATION_ENVIRONMENT)),
             )
         } catch (e: Exception) {
+            println("Error")
             println(e.message)
             throw e
         }
@@ -37,6 +39,7 @@ val envModule = module {
                 accessExpiration = getRequiredEnv(EnvKey.JWT_ACCESS_EXPIRATION).toInt(),
             )
         } catch (e: Exception) {
+            println("Error")
             println(e.message)
             throw e
         }
@@ -52,6 +55,7 @@ val envModule = module {
                 password = getRequiredEnv(EnvKey.DATABASE_PASSWORD),
             )
         } catch (e: Exception) {
+            println("Error")
             println(e.message)
             throw e
         }
@@ -68,12 +72,19 @@ val envModule = module {
                 endpointPort = getEnv(EnvKey.S3_ENDPOINT_PORT)?.toInt()
             )
         } catch (e: Exception) {
+            println("Error")
             println(e.message)
             throw e
         }
     }
 
     single {
-        Env(get(), get(), get(), get(), get())
+        try {
+            Env(get(), get(), get(), get(), get())
+        } catch (e: Exception) {
+            println("Error")
+            println(e.message)
+            throw e
+        }
     }
 }
