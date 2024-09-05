@@ -8,6 +8,7 @@ group = "com.example"
 version = "0.0.1"
 
 application {
+    mainClass.set("MainKt")
     val isDevelopment: Boolean = project.ext.has("development")
     applicationDefaultJvmArgs = listOf("-Dio.ktor.development=$isDevelopment")
 }
@@ -81,4 +82,31 @@ dependencies {
     testImplementation("io.insert-koin:koin-test")
     testImplementation("io.insert-koin:koin-test-junit5")
 
+}
+
+fun loadEnvProperties(): Map<String, String> {
+    val envFile = File(".env")
+    if (!envFile.exists()) {
+        println(".env file not found.")
+        return emptyMap()
+    }
+    return envFile.readLines()
+        .filter { it.isNotBlank() && !it.startsWith("#") }
+        .associate {
+            val (key, value) = it.split("=", limit = 2)
+            key to value
+        }
+}
+
+tasks.register<JavaExec>("runWithEnv") {
+    group = "application"
+    description = "Runs the application with .env variables loaded"
+    classpath = sourceSets["main"].runtimeClasspath
+    mainClass.set(application.mainClass)
+
+    // Load and set environment variables
+    environment(loadEnvProperties())
+
+    // Set JVM arguments if any
+    jvmArgs = listOf(/* Add your JVM arguments here if needed */)
 }

@@ -9,5 +9,6 @@ services:
       dockerfile: ./.docker/Dockerfile
     environment:
       - VITE_API_URL=${VITE_API_URL}
+      - VITE_AUTHOR=${VITE_AUTHOR}
     ports:
       - "${PORT}:80"

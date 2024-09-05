@@ -18,18 +18,27 @@ export default function LanguageButton(props: LanguageButtonProps) {
   }
 
   return (
-    <NavBarLink className={ClassUtils.concat('relative h-8 w-fit min-w-8', props.className)} onClick={toggleLanguage}>
+    <NavBarLink
+      className={ClassUtils.concat('relative h-8 w-fit min-w-8 text-center', props.className)}
+      onClick={toggleLanguage}
+    >
       <Box
-        className={ClassUtils.concat('absolute opacity-0 transition-opacity duration-300', {
-          'opacity-100': language === LanguageChoices.en,
-        })}
+        className={ClassUtils.concat(
+          'absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 items-center justify-center opacity-0 transition-opacity duration-300',
+          {
+            'opacity-100': language === LanguageChoices.en,
+          },
+        )}
       >
         EN
       </Box>
       <Box
-        className={ClassUtils.concat('absolute opacity-0 transition-opacity duration-300', {
-          'opacity-100': language === LanguageChoices.fr,
-        })}
+        className={ClassUtils.concat(
+          'absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 items-center justify-center opacity-0 transition-opacity duration-300',
+          {
+            'opacity-100': language === LanguageChoices.fr,
+          },
+        )}
       >
         FR
       </Box>

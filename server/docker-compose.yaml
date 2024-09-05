@@ -1,0 +1,51 @@
+version: "3.8"
+
+name: "portfolio-api"
+
+services:
+  server:
+    image: portfolio-api
+    build:
+      context: .
+      dockerfile: ./.docker/Dockerfile
+    environment:
+      - API_PORT=${API_PORT}
+      - DB_HOST=db
+      - DB_PORT=5432
+    ports:
+      - "${API_PORT}:${API_PORT}"
+    networks:
+      - backend-network
+
+  s3:
+    image: quay.io/minio/minio
+    ports:
+      - "9001:9001"
+    environment:
+      MINIO_ROOT_USER: ${S3_ROOT_USER}
+      MINIO_ROOT_PASSWORD: ${S3_ROOT_PASSWORD}
+    command:
+      server /data --console-address ":9001"
+    volumes:
+      - s3-data:/data
+    networks:
+      - backend-network
+  db:
+    image: postgres:16.4-alpine3.20
+    environment:
+      POSTGRES_DB: ${DATABASE_NAME}
+      POSTGRES_USER: ${DATABASE_USER}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    networks:
+      - backend-network
+
+volumes:
+  s3-data:
+    driver: local
+  db-data:
+    driver: local
+
+networks:
+  backend-network:

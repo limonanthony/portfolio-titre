@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff67b88e-7cfd-43a8-b678-6fe291347ac6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.docker/scripts/entrypoint.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/Dockerfile" afterDir="false" />
+    <list default="true" id="ff67b88e-7cfd-43a8-b678-6fe291347ac6" name="Changes" comment="Update workspace changes and docker-compose port variable&#10;&#10;Revised `.idea/workspace.xml` change list entries to reflect the current project structure. Modified `docker-compose.yml` to use an environment variable for the port configuration.">
+      <change afterPath="$PROJECT_DIR$/../server/.docker/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../server/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/buttons/LanguageButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/buttons/LanguageButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/navigation/NavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/navigation/NavBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/../server/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../server/docker-compose.local.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +91,7 @@
       <recent name="$PROJECT_DIR$/src/const" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
+  <component name="RunManager" selected="npm.dev">
     <configuration name=".docker/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
@@ -134,9 +139,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.dev" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
         <item itemvalue="Docker..docker/Dockerfile" />
-        <item itemvalue="npm.dev" />
         <item itemvalue="npm.extract-compile" />
       </list>
     </recent_temporary>
@@ -164,11 +169,24 @@
       <workItem from="1725468671315" duration="4524000" />
       <workItem from="1725473210786" duration="6163000" />
       <workItem from="1725523841544" duration="14972000" />
-      <workItem from="1725543174466" duration="2850000" />
+      <workItem from="1725543174466" duration="8019000" />
     </task>
+    <task id="LOCAL-00001" summary="Update workspace changes and docker-compose port variable&#10;&#10;Revised `.idea/workspace.xml` change list entries to reflect the current project structure. Modified `docker-compose.yml` to use an environment variable for the port configuration.">
+      <option name="closed" value="true" />
+      <created>1725546471988</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1725546471988</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update workspace changes and docker-compose port variable&#10;&#10;Revised `.idea/workspace.xml` change list entries to reflect the current project structure. Modified `docker-compose.yml` to use an environment variable for the port configuration." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update workspace changes and docker-compose port variable&#10;&#10;Revised `.idea/workspace.xml` change list entries to reflect the current project structure. Modified `docker-compose.yml` to use an environment variable for the port configuration." />
   </component>
 </project>
