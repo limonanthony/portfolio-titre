@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
 plugins {
     kotlin("jvm") version "2.0.0"
     id("io.ktor.plugin") version "2.3.12"
@@ -86,16 +88,28 @@ dependencies {
 
 fun loadEnvProperties(): Map<String, String> {
     val envFile = File(".env")
-    if (!envFile.exists()) {
-        println(".env file not found.")
-        return emptyMap()
+    val fileEnv = if (envFile.exists()) {
+        envFile.readLines()
+            .filter { it.isNotBlank() && !it.startsWith("#") }
+            .associate {
+                val (key, value) = it.split("=", limit = 2)
+                key to value
+            }
+    } else {
+        emptyMap()
     }
-    return envFile.readLines()
-        .filter { it.isNotBlank() && !it.startsWith("#") }
-        .associate {
-            val (key, value) = it.split("=", limit = 2)
-            key to value
-        }
+
+    val systemEnv = System.getenv()
+    return fileEnv + systemEnv
+}
+
+tasks.withType<KotlinCompile> {
+    kotlinOptions {
+        allWarningsAsErrors = false
+        freeCompilerArgs = listOf(
+            "-Xlint:-unchecked",
+        )
+    }
 }
 
 tasks.register<JavaExec>("runWithEnv") {

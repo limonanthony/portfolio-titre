@@ -22,13 +22,13 @@ class UserServiceTest : FunSpec({
     val faker = Faker()
 
     val hashedReturnValue = faker.random.randomString(24)
+    val hashService = mockk<HashingService>()
 
     lateinit var service: UserService
 
     lateinit var dto: UserCreationDto
 
     beforeTest {
-        val hashService = mockk<HashingService>()
         coEvery { hashService.hash(any()) } returns hashedReturnValue
 
         service = UserService(MockUserRepositoryImpl(), hashService)
@@ -66,6 +66,8 @@ class UserServiceTest : FunSpec({
 
         beforeTest {
             user = service.create(dto)
+
+            coEvery { hashService.verify(any(), any()) } returns true
         }
 
         test("should return the correct user") {

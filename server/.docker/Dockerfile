@@ -1,27 +1,14 @@
-FROM openjdk:24-bullseye AS builder
-LABEL authors="anthonylimon"
-
-RUN apt-get update && apt-get install -y findutils
-
+FROM openjdk:20-bullseye AS run-stage
 
 WORKDIR /app
 
-COPY build.gradle.kts settings.gradle.kts gradlew /app/
-COPY gradle /app/gradle
+COPY . .
 
-COPY src /app/src
+RUN rm .env
 
 RUN chmod +x ./gradlew
 
-RUN ./gradlew installDist
-
-FROM openjdk:24-bullseye AS runner
-LABEL authors="anthonylimon"
-
-WORKDIR /app
-
-COPY --from=builder /app/build/install/api /app/
+ENV API_PORT=4242
 
 EXPOSE ${API_PORT}
-
-ENTRYPOINT ["./bin/api"]
+CMD ["./gradlew", "runWithEnv"]
