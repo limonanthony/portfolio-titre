@@ -34,10 +34,10 @@
     "baseUrl": "."
   },
   "include": [
-    "src",
-    "./vite.config.ts"
+    "src"
   ],
   "exclude": [
+    "vite.config.ts",
     "node_modules"
   ],
   "references": [

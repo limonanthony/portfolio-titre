@@ -1,0 +1,13 @@
+version: "3.8"
+name: "portfolio-client"
+
+services:
+  front-end:
+    image: portfolio-frontend
+    build:
+      context: .
+      dockerfile: ./.docker/Dockerfile
+    environment:
+      - VITE_API_URL=${VITE_API_URL}
+    ports:
+      - "80:80"
