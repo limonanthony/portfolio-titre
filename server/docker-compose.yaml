@@ -59,7 +59,7 @@ services:
       POSTGRES_USER: ${DATABASE_USER}
       POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
     ports:
-      - "${DB_PORT}:${DB_PORT}"
+      - "${DATABASE_PORT}:${DATABASE_PORT}"
     volumes:
       - db-data:/var/lib/postgresql/data
     networks:
