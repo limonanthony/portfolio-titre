@@ -8,8 +8,9 @@ import org.koin.dsl.module
 val envModule = module {
     single {
         try {
+            println("API_HOST ${System.getenv("API_HOST")}")
             EnvApi(
-                host = "localhost",
+                host = getRequiredEnv(EnvKey.API_HOST),
                 port = getRequiredEnv(EnvKey.API_PORT).toInt()
             )
         } catch (e: Exception) {
