@@ -9,7 +9,7 @@ val envModule = module {
     single {
         try {
             EnvApi(
-                host = getRequiredEnv(EnvKey.API_HOST),
+                host = "localhost",
                 port = getRequiredEnv(EnvKey.API_PORT).toInt()
             )
         } catch (e: Exception) {
