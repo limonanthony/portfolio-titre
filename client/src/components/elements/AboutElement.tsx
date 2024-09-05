@@ -1,4 +1,6 @@
-import { Box, Typography } from '@mui/material';
+import { Box, Button, Typography } from '@mui/material';
+import { FileDownIcon } from 'lucide-react';
+import { useRef } from 'react';
 import { FormattedMessage } from 'react-intl';
 
 import CIcon from '@/assets/icons/c-icon.svg?react';
@@ -14,6 +16,7 @@ import PostgresIcon from '@/assets/icons/postgres-icon.svg?react';
 import ReactIcon from '@/assets/icons/react-icon.svg?react';
 import SassIcon from '@/assets/icons/sass-icon.svg?react';
 import TsIcon from '@/assets/icons/ts-icon.svg?react';
+import CvPdf from '@/assets/pdf/cv.pdf';
 import DescriptionParagraph from '@/components/elements/paragraphs/Description.paragraph';
 import Element from '@/components/ui/layout/Element';
 import SkillBadge from '@/components/ui/tags/Skill.badge';
@@ -91,6 +94,8 @@ const languages = [
 ];
 
 export default function AboutElement() {
+  const cvRef = useRef<HTMLAnchorElement>(null);
+
   return (
     <Element className="items-center gap-12" id={ElementId.About}>
       <ElementTitle>
@@ -133,6 +138,14 @@ export default function AboutElement() {
             ))}
           </Box>
         </Box>
+      </Box>
+      <Box className="flex w-full justify-center py-8">
+        <Button className="flex gap-2 !px-4 !py-2 !text-2xl" onClick={() => cvRef.current?.click()} variant="contained">
+          <FileDownIcon />
+          <span>CV</span>
+        </Button>
+        {/* eslint-disable-next-line jsx-a11y/anchor-has-content,jsx-a11y/control-has-associated-label */}
+        <a className="hidden" download={cvRef} href={CvPdf} ref={cvRef} rel="noreferrer" target="_blank" />
       </Box>
     </Element>
   );
