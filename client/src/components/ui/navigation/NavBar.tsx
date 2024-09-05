@@ -60,27 +60,27 @@ function NavBarMobile() {
                 <FormattedMessage defaultMessage="Home" description="Home navigation" />
               </NavBarLink>
             </ListItemButton>
-            <ListItemButton className="flex !justify-center !py-4" onClick={scrollToId(ElementId.Home)}>
-              <NavBarLink className="size-fit" onClick={scrollToId(ElementId.About)}>
+            <ListItemButton className="flex !justify-center !py-4" onClick={scrollToId(ElementId.About)}>
+              <NavBarLink className="size-fit">
                 <FormattedMessage defaultMessage="About" description="About me navigation" />
               </NavBarLink>
             </ListItemButton>
-            <ListItemButton className="flex !justify-center !py-4" onClick={scrollToId(ElementId.Home)}>
-              <NavBarLink onClick={scrollToId(ElementId.Projects)}>
+            <ListItemButton className="flex !justify-center !py-4" onClick={scrollToId(ElementId.Projects)}>
+              <NavBarLink>
                 <FormattedMessage defaultMessage="Projects" description="Projects navigation" />
               </NavBarLink>
             </ListItemButton>
-            <ListItemButton className="flex !justify-center !py-4" onClick={scrollToId(ElementId.Home)}>
-              <NavBarLink onClick={scrollToId(ElementId.Contact)}>
+            <ListItemButton className="flex !justify-center !py-4" onClick={scrollToId(ElementId.Contact)}>
+              <NavBarLink>
                 <FormattedMessage defaultMessage="Contact" description="Contact me navigation" />
               </NavBarLink>
             </ListItemButton>
           </List>
           <List className="flex flex-col py-6">
-            <ListItemButton className="flex !justify-center !py-4" onClick={scrollToId(ElementId.Home)}>
+            <ListItemButton className="flex !justify-center !py-4">
               <LanguageButton />
             </ListItemButton>
-            <ListItemButton className="flex !justify-center !py-4" onClick={scrollToId(ElementId.Home)}>
+            <ListItemButton className="flex !justify-center !py-4">
               <ThemeButton />
             </ListItemButton>
           </List>

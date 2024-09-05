@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff67b88e-7cfd-43a8-b678-6fe291347ac6" name="Changes" comment="Update workspace changes and docker-compose port variable&#10;&#10;Revised `.idea/workspace.xml` change list entries to reflect the current project structure. Modified `docker-compose.yml` to use an environment variable for the port configuration.">
-      <change afterPath="$PROJECT_DIR$/../server/.docker/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../server/docker-compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/buttons/LanguageButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/buttons/LanguageButton.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ui/navigation/NavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/navigation/NavBar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/../server/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../server/docker-compose.local.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +161,7 @@
       <workItem from="1725468671315" duration="4524000" />
       <workItem from="1725473210786" duration="6163000" />
       <workItem from="1725523841544" duration="14972000" />
-      <workItem from="1725543174466" duration="8019000" />
+      <workItem from="1725543174466" duration="8241000" />
     </task>
     <task id="LOCAL-00001" summary="Update workspace changes and docker-compose port variable&#10;&#10;Revised `.idea/workspace.xml` change list entries to reflect the current project structure. Modified `docker-compose.yml` to use an environment variable for the port configuration.">
       <option name="closed" value="true" />
