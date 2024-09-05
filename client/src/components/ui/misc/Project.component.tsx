@@ -16,15 +16,23 @@ export interface ProjectSkillProps {
 }
 
 export function ProjectTitle({ children }: ChildrenProp) {
-  return <Typography variant="h4">{children}</Typography>;
+  return (
+    <Typography color="primary" fontWeight="bold" variant="h4">
+      {children}
+    </Typography>
+  );
 }
 
 export function ProjectDescription({ children }: ChildrenProp) {
-  return <Typography variant="body1">{children}</Typography>;
+  return (
+    <div className="min-h-0 overflow-y-scroll">
+      <Typography variant="body1">{children}</Typography>
+    </div>
+  );
 }
 
 export function ProjectImage({ alt, src }: ProjectImageProps) {
-  return <img alt={alt} src={src} />;
+  return <img alt={alt} className="m-auto size-96 object-contain" src={src} />;
 }
 
 export function ProjectImages({ images }: { images: ProjectImageProps[] }) {
@@ -40,7 +48,7 @@ export function ProjectImages({ images }: { images: ProjectImageProps[] }) {
 export function ProjectSkill({ description, label }: ProjectSkillProps) {
   return (
     <Tooltip title={description}>
-      <Chip className="select-none" label={label} />
+      <Chip className="select-none" color="default" label={label} />
     </Tooltip>
   );
 }
@@ -60,6 +68,14 @@ export function ProjectSkills({ skills }: { skills: ProjectSkillProps[] }) {
   );
 }
 
+export function ProjectDescriptionTitle({ children }: ChildrenProp) {
+  return <Typography variant="h6">{children}</Typography>;
+}
+
+export function ProjectDescriptionText({ children }: ChildrenProp) {
+  return <Typography variant="body1">{children}</Typography>;
+}
+
 export interface ProjectComponentProps {
   description: ReactNode;
   images: ProjectImageProps[];
@@ -72,13 +88,13 @@ export default function ProjectComponent(props: ProjectComponentProps) {
     description, images, skills, title,
   } = props;
   return (
-    <div className="flex flex-1 px-8">
-      <div className="flex flex-1 flex-col justify-between py-8">
+    <div className="flex flex-1 flex-col gap-4 px-16 md:h-[60vh] md:flex-row">
+      <div className="flex flex-1 flex-col justify-between gap-4">
         <ProjectTitle>{title}</ProjectTitle>
         <ProjectDescription>{description}</ProjectDescription>
         <ProjectSkills skills={skills} />
       </div>
-      <div className="flex flex-1">
+      <div className="flex flex-1 items-center">
         <ProjectImages images={images} />
       </div>
     </div>

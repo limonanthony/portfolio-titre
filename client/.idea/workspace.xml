@@ -5,15 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff67b88e-7cfd-43a8-b678-6fe291347ac6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/ui/misc/Project.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/git_toolbox_blame.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/git_toolbox_blame.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/projects/company/dashboard-mobile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/projects/company/dashboard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/projects/company/maquette-dashboard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/projects/Company.project.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/projects/Group.project.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/projects/Porftolio.project.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/elements/ProjectsElement.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/elements/ProjectsElement.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/cards/Project.card.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/layout/AppLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/layout/AppLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/layout/Element.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/layout/Element.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/data/projects.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/src/test/kotlin/mocks/database/repositories/MockImageRepositoryImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../server/src/test/kotlin/mocks/database/repositories/MockImageRepositoryImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/misc/Project.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/misc/Project.component.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,35 +46,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.8.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.5.3&quot;,
-    &quot;js.linters.configure.manually.selectedeslint&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/anthonylimon/Documents/Projects/Epitech/portfolio/client/src/assets/images&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;/Users/anthonylimon/Documents/Projects/Epitech/portfolio/client/node_modules/eslint&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;npm.extract-compile.executor&quot;: &quot;Run&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/anthonylimon/Documents/Projects/Epitech/portfolio/client/node_modules/prettier&quot;,
-    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/anthonylimon/Documents/Projects/Epitech/portfolio/client/node_modules/typescript/lib&quot;,
-    &quot;typescript.add.unambiguous.imports.on.the.fly&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "code.cleanup.on.save": "true",
+    "git-widget-placeholder": "master",
+    "javascript.nodejs.core.library.configured.version": "22.8.0",
+    "javascript.nodejs.core.library.typings.version": "22.5.3",
+    "js.linters.configure.manually.selectedeslint": "true",
+    "last_opened_file_path": "/Users/anthonylimon/Documents/Projects/Epitech/portfolio/client/src/assets/images/projects/company",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "/Users/anthonylimon/Documents/Projects/Epitech/portfolio/client/node_modules/eslint",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "pnpm",
+    "npm.dev.executor": "Run",
+    "npm.extract-compile.executor": "Run",
+    "prettierjs.PrettierConfiguration.Package": "/Users/anthonylimon/Documents/Projects/Epitech/portfolio/client/node_modules/prettier",
+    "rearrange.code.on.save": "true",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "/Users/anthonylimon/Documents/Projects/Epitech/portfolio/client/node_modules/typescript/lib",
+    "typescript.add.unambiguous.imports.on.the.fly": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets/images/projects/company" />
       <recent name="$PROJECT_DIR$/src/assets/images" />
       <recent name="$PROJECT_DIR$/src/components/ui/inputs" />
     </key>
@@ -136,7 +137,7 @@
       <workItem from="1725461127409" duration="3507000" />
       <workItem from="1725468671315" duration="4524000" />
       <workItem from="1725473210786" duration="6163000" />
-      <workItem from="1725523841544" duration="3064000" />
+      <workItem from="1725523841544" duration="9429000" />
     </task>
     <servers />
   </component>
