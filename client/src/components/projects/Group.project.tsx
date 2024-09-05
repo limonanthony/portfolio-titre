@@ -1,3 +1,7 @@
+import ClientCreationModalImage from '@/assets/images/projects/group/client-creation-modal.png';
+import ClientPageImage from '@/assets/images/projects/group/client-page.png';
+import LoginPageImage from '@/assets/images/projects/group/login-page.png';
+import MaquetteLoginImage from '@/assets/images/projects/group/maquette-login.png';
 import ProjectComponent, {
   ProjectDescriptionText,
   ProjectDescriptionTitle,
@@ -34,7 +38,24 @@ export default function GroupProject() {
           </ProjectDescriptionText>
         </div>
       )}
-      images={[]}
+      images={[
+        {
+          alt: 'Maquette Login',
+          src: MaquetteLoginImage,
+        },
+        {
+          alt: 'Login page',
+          src: LoginPageImage,
+        },
+        {
+          alt: 'Client page',
+          src: ClientPageImage,
+        },
+        {
+          alt: 'Client creation modal',
+          src: ClientCreationModalImage,
+        },
+      ]}
       skills={[
         {
           description:
