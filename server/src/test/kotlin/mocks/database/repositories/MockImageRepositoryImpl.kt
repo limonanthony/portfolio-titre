@@ -13,8 +13,10 @@ class MockImageRepositoryImpl : ImageRepository {
         return entities
     }
 
-    override suspend fun deleteMultiple(predicate: (entity: Image) -> Boolean) {
-        images.removeIf(predicate)
+    override suspend fun deleteMultiple(ids: List<UUID>) {
+        images.filter { it.id in ids }.forEach {
+            images.remove(it)
+        }
     }
 
     override suspend fun exists(predicate: (entity: Image) -> Boolean): Boolean {

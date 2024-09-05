@@ -13,7 +13,14 @@ export default function AppLayout({ children }: AppLayoutProps) {
   return (
     <Box className="flex max-h-screen flex-1 flex-col overflow-hidden">
       <NavBar />
-      <Box className="mt-20 flex flex-1 flex-col overflow-y-scroll" id={ElementId.Body}>
+      <Box
+        className="mt-20 flex flex-1 flex-col overflow-y-scroll"
+        id={ElementId.Body}
+        sx={{
+          scrollSnapAlign: 'center',
+          scrollSnapType: 'y mandatory',
+        }}
+      >
         {children ?? <Outlet />}
         <ParticleMisc />
         <ScrollToTopButton />
