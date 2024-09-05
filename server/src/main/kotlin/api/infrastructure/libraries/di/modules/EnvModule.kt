@@ -15,6 +15,8 @@ val envModule = module {
             )
         } catch (e: Exception) {
             println("Error")
+            println(e.cause.toString())
+            println(e.stackTraceToString())
             println(e.message)
             throw e
         }
