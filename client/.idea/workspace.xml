@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff67b88e-7cfd-43a8-b678-6fe291347ac6" name="Changes" comment="Update workspace changes and docker-compose port variable&#10;&#10;Revised `.idea/workspace.xml` change list entries to reflect the current project structure. Modified `docker-compose.yml` to use an environment variable for the port configuration.">
-      <change beforePath="$PROJECT_DIR$/src/components/elements/AboutElement.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/elements/AboutElement.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="ff67b88e-7cfd-43a8-b678-6fe291347ac6" name="Changes" comment="Update workspace changes and docker-compose port variable&#10;&#10;Revised `.idea/workspace.xml` change list entries to reflect the current project structure. Modified `docker-compose.yml` to use an environment variable for the port configuration." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
