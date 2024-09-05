@@ -1,3 +1,6 @@
+import JwtImplementationImage from '@/assets/images/projects/portfolio/jwt-implementation.png';
+import TestExampleImage from '@/assets/images/projects/portfolio/test-example.png';
+import TestStructureImage from '@/assets/images/projects/portfolio/test-structure.png';
 import ProjectComponent, {
   ProjectDescriptionText,
   ProjectDescriptionTitle,
@@ -25,7 +28,20 @@ export default function PortfolioProject() {
           </ProjectDescriptionText>
         </div>
       )}
-      images={[]}
+      images={[
+        {
+          alt: 'Test folder structure',
+          src: TestStructureImage,
+        },
+        {
+          alt: 'Test example',
+          src: TestExampleImage,
+        },
+        {
+          alt: 'Jwt Implementation',
+          src: JwtImplementationImage,
+        },
+      ]}
       skills={[
         {
           description:

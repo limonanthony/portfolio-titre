@@ -1,8 +1,10 @@
+import { useModal } from '@ebay/nice-modal-react';
 import { faker } from '@faker-js/faker';
 import { Chip, Tooltip, Typography } from '@mui/material';
 import { ReactNode } from 'react';
 import Carousel from 'react-material-ui-carousel';
 
+import ImageModal from '@/components/modals/Image.modal.tsx';
 import { ChildrenProp } from '@/types/prop.types.ts';
 
 export interface ProjectImageProps {
@@ -32,7 +34,17 @@ export function ProjectDescription({ children }: ChildrenProp) {
 }
 
 export function ProjectImage({ alt, src }: ProjectImageProps) {
-  return <img alt={alt} className="m-auto size-96 object-contain" src={src} />;
+  const modal = useModal(ImageModal);
+
+  return (
+    // eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-noninteractive-element-interactions
+    <img
+      alt={alt}
+      className="m-auto size-96 cursor-pointer object-contain"
+      onClick={() => modal.show({ alt, src })}
+      src={src}
+    />
+  );
 }
 
 export function ProjectImages({ images }: { images: ProjectImageProps[] }) {

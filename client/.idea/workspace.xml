@@ -5,15 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff67b88e-7cfd-43a8-b678-6fe291347ac6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/images/projects/company/dashboard-mobile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/projects/company/dashboard.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/projects/company/maquette-dashboard.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/projects/Company.project.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/projects/Group.project.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/projects/Porftolio.project.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/projects/company/documentation-folders.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/projects/company/project-install-documentation.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/projects/portfolio/jwt-implementation.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/projects/portfolio/test-example.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/projects/portfolio/test-structure.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/modals/Image.modal.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/modals/Modal.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/elements/ProjectsElement.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/elements/ProjectsElement.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/misc/Project.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/misc/Project.component.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/projects/Company.project.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects/Company.project.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/projects/Porftolio.project.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects/Porftolio.project.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/misc/Project.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/misc/Project.component.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +81,7 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/assets/images/projects/company" />
+      <recent name="$PROJECT_DIR$/src/assets/images/projects/portfolio" />
       <recent name="$PROJECT_DIR$/src/assets/images" />
       <recent name="$PROJECT_DIR$/src/components/ui/inputs" />
     </key>
@@ -137,7 +143,7 @@
       <workItem from="1725461127409" duration="3507000" />
       <workItem from="1725468671315" duration="4524000" />
       <workItem from="1725473210786" duration="6163000" />
-      <workItem from="1725523841544" duration="9429000" />
+      <workItem from="1725523841544" duration="14810000" />
     </task>
     <servers />
   </component>

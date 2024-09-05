@@ -13,6 +13,7 @@
     "extract-compile": "formatjs extract \"src/**/*.ts*\" --ignore 'src/*.d.ts' --out-file temp.json && formatjs compile 'temp.json' --out-file src/lang/en.json && rm temp.json"
   },
   "dependencies": {
+    "@ebay/nice-modal-react": "^1.2.13",
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "@faker-js/faker": "^8.4.1",

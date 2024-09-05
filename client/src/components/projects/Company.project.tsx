@@ -1,6 +1,8 @@
 import DashboardImage from '@/assets/images/projects/company/dashboard.png';
 import DashboardMobileImage from '@/assets/images/projects/company/dashboard-mobile.png';
+import DocumentationFolderImage from '@/assets/images/projects/company/documentation-folders.png';
 import MaquetteDashboardImage from '@/assets/images/projects/company/maquette-dashboard.png';
+import ProjectInstallDocumentationImage from '@/assets/images/projects/company/project-install-documentation.png';
 import ProjectComponent, {
   ProjectDescriptionText,
   ProjectDescriptionTitle,
@@ -61,6 +63,14 @@ export default function CompanyProject() {
         {
           alt: 'Maquette dashboard',
           src: MaquetteDashboardImage,
+        },
+        {
+          alt: 'Documentation folder',
+          src: DocumentationFolderImage,
+        },
+        {
+          alt: 'Project installation documentation',
+          src: ProjectInstallDocumentationImage,
         },
       ]}
       skills={[

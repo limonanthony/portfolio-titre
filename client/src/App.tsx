@@ -1,3 +1,4 @@
+import NiceModal from '@ebay/nice-modal-react';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import { IntlProvider } from 'react-intl';
 import { RouterProvider } from 'react-router-dom';
@@ -14,7 +15,9 @@ export default function App() {
     <IntlProvider locale={language} messages={messages}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <RouterProvider router={router} />
+        <NiceModal.Provider>
+          <RouterProvider router={router} />
+        </NiceModal.Provider>
       </ThemeProvider>
     </IntlProvider>
   );
