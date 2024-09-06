@@ -113,17 +113,19 @@ export default function AboutElement() {
             <FormattedMessage defaultMessage="Get to know me" />
           </Typography>
           <DescriptionParagraph>
-            I enjoy creating new mobile applications/websites and exploring new technologies. I am an enthusiastic
+            <FormattedMessage
+              defaultMessage="I enjoy creating new mobile applications/websites and exploring new technologies. I am an enthusiastic
             web/mobile developer, which is why I recently made the decision to transition my career towards web
-            development.
+            development."
+            />
           </DescriptionParagraph>
           <DescriptionParagraph>
-            As a result, I am currently seeking an apprenticeship opportunity that will allow me to gain experience in
-            the field of web development.
+            <FormattedMessage defaultMessage="As a result, I am currently seeking an apprenticeship opportunity that will allow me to gain experience in the field of web development." />
           </DescriptionParagraph>
           <DescriptionParagraph>
-            I am primarily looking for a company that works with React.js and Node.js, as these are technologies that
-            greatly interest me.
+            <FormattedMessage
+              defaultMessage="I am primarily looking for a company that works with React.js and Node.js, as these are technologies that greatly interest me."
+            />
           </DescriptionParagraph>
         </Box>
         <Box className="flex flex-1 flex-col gap-6">
