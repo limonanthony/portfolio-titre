@@ -28,6 +28,7 @@ export default function PortfolioProject() {
           </ProjectDescriptionText>
         </div>
       )}
+      githubUrl="https://github.com/anthonynomil/portfolio-titre"
       images={[
         {
           alt: 'Test folder structure',
@@ -74,6 +75,7 @@ export default function PortfolioProject() {
         },
       ]}
       title="Portfolio (ce project)"
+      websiteUrl="http://116.202.242.105:88/"
     />
   );
 }

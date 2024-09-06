@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff67b88e-7cfd-43a8-b678-6fe291347ac6" name="Changes" comment="Update workspace changes and docker-compose port variable&#10;&#10;Revised `.idea/workspace.xml` change list entries to reflect the current project structure. Modified `docker-compose.yml` to use an environment variable for the port configuration." />
+    <list default="true" id="ff67b88e-7cfd-43a8-b678-6fe291347ac6" name="Changes" comment="Update workspace changes and docker-compose port variable&#10;&#10;Revised `.idea/workspace.xml` change list entries to reflect the current project structure. Modified `docker-compose.yml` to use an environment variable for the port configuration.">
+      <change afterPath="$PROJECT_DIR$/src/assets/icons/github-icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/icons/web-icon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/projects/Company.project.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects/Company.project.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/projects/Group.project.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects/Group.project.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/projects/Porftolio.project.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects/Porftolio.project.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/misc/Project.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/misc/Project.component.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,7 +54,7 @@
     "javascript.nodejs.core.library.configured.version": "22.8.0",
     "javascript.nodejs.core.library.typings.version": "22.5.3",
     "js.linters.configure.manually.selectedeslint": "true",
-    "last_opened_file_path": "/Users/anthonylimon/Documents/Projects/Epitech/portfolio/client/src/assets/pdf",
+    "last_opened_file_path": "/Users/anthonylimon/Documents/Projects/Epitech/portfolio/client/src/assets/icons",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -59,7 +67,7 @@
     "npm.extract-compile.executor": "Run",
     "prettierjs.PrettierConfiguration.Package": "/Users/anthonylimon/Documents/Projects/Epitech/portfolio/client/node_modules/prettier",
     "rearrange.code.on.save": "true",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "preferences.general",
     "ts.external.directory.path": "/Users/anthonylimon/Documents/Projects/Epitech/portfolio/client/node_modules/typescript/lib",
     "typescript.add.unambiguous.imports.on.the.fly": "true",
     "vue.rearranger.settings.migration": "true"
@@ -67,11 +75,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets/icons" />
       <recent name="$PROJECT_DIR$/src/assets/pdf" />
       <recent name="$PROJECT_DIR$/src/assets/images/projects/group" />
       <recent name="$PROJECT_DIR$/src/assets/images/projects/company" />
       <recent name="$PROJECT_DIR$/src/assets/images/projects/portfolio" />
-      <recent name="$PROJECT_DIR$/src/assets/images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/images" />
@@ -164,6 +172,8 @@
       <workItem from="1725473210786" duration="6163000" />
       <workItem from="1725523841544" duration="14972000" />
       <workItem from="1725543174466" duration="13003000" />
+      <workItem from="1725579637115" duration="10000" />
+      <workItem from="1725579663827" duration="1592000" />
     </task>
     <task id="LOCAL-00001" summary="Update workspace changes and docker-compose port variable&#10;&#10;Revised `.idea/workspace.xml` change list entries to reflect the current project structure. Modified `docker-compose.yml` to use an environment variable for the port configuration.">
       <option name="closed" value="true" />

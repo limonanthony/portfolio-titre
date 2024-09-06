@@ -1,9 +1,13 @@
 import { useModal } from '@ebay/nice-modal-react';
 import { faker } from '@faker-js/faker';
-import { Chip, Tooltip, Typography } from '@mui/material';
+import {
+  Chip, IconButton, Tooltip, Typography,
+} from '@mui/material';
 import { ReactNode } from 'react';
 import Carousel from 'react-material-ui-carousel';
 
+import GithubIcon from '@/assets/icons/github-icon.svg?react';
+import WebIcon from '@/assets/icons/web-icon.svg?react';
 import ImageModal from '@/components/modals/Image.modal.tsx';
 import { ChildrenProp } from '@/types/prop.types.ts';
 
@@ -17,10 +21,29 @@ export interface ProjectSkillProps {
   label: string;
 }
 
-export function ProjectTitle({ children }: ChildrenProp) {
+export interface ProjectTitleProps extends ChildrenProp {
+  githubUrl?: string;
+  websiteUrl?: string;
+}
+
+export function ProjectTitle({ children, githubUrl, websiteUrl }: ProjectTitleProps) {
   return (
-    <Typography color="primary" fontWeight="bold" variant="h4">
-      {children}
+    <Typography className="flex gap-3" color="primary" fontWeight="bold" variant="h4">
+      <span>{children}</span>
+      {githubUrl && (
+        <Tooltip title="Github url">
+          <IconButton href={githubUrl} target="_blank">
+            <GithubIcon />
+          </IconButton>
+        </Tooltip>
+      )}
+      {websiteUrl && (
+        <Tooltip title="Website url">
+          <IconButton href={websiteUrl} target="_blank">
+            <WebIcon />
+          </IconButton>
+        </Tooltip>
+      )}
     </Typography>
   );
 }
@@ -90,19 +113,23 @@ export function ProjectDescriptionText({ children }: ChildrenProp) {
 
 export interface ProjectComponentProps {
   description: ReactNode;
+  githubUrl?: string;
   images: ProjectImageProps[];
   skills: ProjectSkillProps[];
   title: string;
+  websiteUrl?: string;
 }
 
 export default function ProjectComponent(props: ProjectComponentProps) {
   const {
-    description, images, skills, title,
+    description, githubUrl, images, skills, title, websiteUrl,
   } = props;
   return (
     <div className="flex flex-1 flex-col gap-4 px-16 md:h-[60vh] md:flex-row">
       <div className="flex flex-1 flex-col justify-between gap-4">
-        <ProjectTitle>{title}</ProjectTitle>
+        <ProjectTitle githubUrl={githubUrl} websiteUrl={websiteUrl}>
+          {title}
+        </ProjectTitle>
         <ProjectDescription>{description}</ProjectDescription>
         <ProjectSkills skills={skills} />
       </div>

@@ -111,6 +111,7 @@ export default function CompanyProject() {
         },
       ]}
       title="Inara (alternance)"
+      websiteUrl="https://app.inara.fr/login"
     />
   );
 }

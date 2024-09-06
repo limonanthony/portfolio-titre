@@ -38,6 +38,7 @@ export default function GroupProject() {
           </ProjectDescriptionText>
         </div>
       )}
+      githubUrl="https://github.com/anthonynomil/project-libre/tree/master"
       images={[
         {
           alt: 'Maquette Login',
@@ -94,6 +95,7 @@ export default function GroupProject() {
         },
       ]}
       title="Projet de fin d'étude"
+      websiteUrl="http://116.202.242.105:89"
     />
   );
 }
