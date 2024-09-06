@@ -23,7 +23,7 @@ export default function ContactElement() {
         <FormattedMessage defaultMessage="Contact" />
       </ElementTitle>
       <Box className="flex flex-1 flex-col items-center justify-center gap-4">
-        <ReviewForm className="w-96 max-w-full" isLoading={isPending} onSubmit={mutate} />
+        <ReviewForm className="w-96 max-w-full px-8" isLoading={isPending} onSubmit={mutate} />
       </Box>
     </Element>
   );

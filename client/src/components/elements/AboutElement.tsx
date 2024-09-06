@@ -101,13 +101,15 @@ export default function AboutElement() {
       <ElementTitle>
         <FormattedMessage defaultMessage="About Me" />
       </ElementTitle>
-      <Typography className="max-w-screen-md text-center" variant="body1">
+      <Typography className="max-w-screen-md px-4 text-center" variant="body1">
         <FormattedMessage
           defaultMessage=" Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology "
           description="about me page presentation"
         />
       </Typography>
-      <Box className="lg:px16 flex w-full flex-1 flex-col gap-4 px-12 transition-all duration-300 md:gap-16 lg:flex-row xl:px-32">
+      <Box
+        className="lg:px16 flex w-full flex-1 flex-col gap-4 px-12 transition-all duration-300 md:gap-16 lg:flex-row xl:px-32"
+      >
         <Box className="flex flex-1 flex-col gap-6">
           <Typography fontWeight="bold" variant="h5">
             <FormattedMessage defaultMessage="Get to know me" />
@@ -120,7 +122,9 @@ export default function AboutElement() {
             />
           </DescriptionParagraph>
           <DescriptionParagraph>
-            <FormattedMessage defaultMessage="As a result, I am currently seeking an apprenticeship opportunity that will allow me to gain experience in the field of web development." />
+            <FormattedMessage
+              defaultMessage="As a result, I am currently seeking an apprenticeship opportunity that will allow me to gain experience in the field of web development."
+            />
           </DescriptionParagraph>
           <DescriptionParagraph>
             <FormattedMessage
@@ -142,7 +146,11 @@ export default function AboutElement() {
         </Box>
       </Box>
       <Box className="flex w-full justify-center py-8">
-        <Button className="flex gap-2 !px-4 !py-2 !text-2xl" onClick={() => cvRef.current?.click()} variant="contained">
+        <Button
+          className="flex gap-2 !px-4 !py-2 !text-2xl"
+          onClick={() => cvRef.current?.click()}
+          variant="contained"
+        >
           <FileDownIcon />
           <span>CV</span>
         </Button>

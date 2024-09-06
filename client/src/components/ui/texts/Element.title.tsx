@@ -16,7 +16,12 @@ export default function ElementTitle({
 }: ElementTitleProps) {
   return (
     <Box className={ClassUtils.concat('flex size-fit flex-col gap-4', className)}>
-      <Typography className="uppercase !tracking-widest" fontWeight="bolder" sx={sx} variant="h3">
+      <Typography
+        className="px-4 text-center uppercase !tracking-widest"
+        fontWeight="bolder"
+        sx={sx}
+        variant="h3"
+      >
         {children}
       </Typography>
       {showUnderline && (

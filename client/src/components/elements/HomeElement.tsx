@@ -18,7 +18,7 @@ export default function HomeElement() {
           fontWeight="bolder"
           variant="h3"
         >
-          <FormattedMessage defaultMessage={"Hey, I'm Anthony Limon"} />
+          <FormattedMessage defaultMessage="Hey, I'm Anthony Limon" />
         </Typography>
         <Typography align="center" className="max-w-full self-center text-wrap" variant="h5">
           <FormattedMessage
@@ -32,7 +32,7 @@ export default function HomeElement() {
           </Typography>
         </Button>
       </Box>
-      <MouseImage className="mt-auto" />
+      <MouseImage className="mt-8 mt-auto" />
     </Element>
   );
 }
