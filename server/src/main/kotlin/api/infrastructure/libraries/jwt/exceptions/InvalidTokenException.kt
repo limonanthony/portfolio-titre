@@ -1,3 +1,7 @@
 package api.infrastructure.libraries.jwt.exceptions
 
-class InvalidTokenException : Exception("The token is invalid.")
+import api.app.exceptions.ExceptionWithStatusCode
+import api.infrastructure.server.status.HttpStatusCode
+
+class InvalidTokenException :
+    ExceptionWithStatusCode("The token is invalid.", httpStatusCode = HttpStatusCode.UNAUTHORIZED)

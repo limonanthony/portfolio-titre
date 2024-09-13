@@ -6,10 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ff67b88e-7cfd-43a8-b678-6fe291347ac6" name="Changes" comment="Update workspace changes and docker-compose port variable&#10;&#10;Revised `.idea/workspace.xml` change list entries to reflect the current project structure. Modified `docker-compose.yml` to use an environment variable for the port configuration.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/elements/AboutElement.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/elements/AboutElement.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/elements/Contact.element.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/elements/Contact.element.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/elements/HomeElement.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/elements/HomeElement.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/texts/Element.title.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/texts/Element.title.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,7 +168,9 @@
       <workItem from="1725543174466" duration="13003000" />
       <workItem from="1725579637115" duration="10000" />
       <workItem from="1725579663827" duration="1916000" />
-      <workItem from="1725604671007" duration="398000" />
+      <workItem from="1725604671007" duration="1867000" />
+      <workItem from="1725620961787" duration="603000" />
+      <workItem from="1725626154107" duration="643000" />
     </task>
     <task id="LOCAL-00001" summary="Update workspace changes and docker-compose port variable&#10;&#10;Revised `.idea/workspace.xml` change list entries to reflect the current project structure. Modified `docker-compose.yml` to use an environment variable for the port configuration.">
       <option name="closed" value="true" />

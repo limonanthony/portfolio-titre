@@ -32,7 +32,7 @@ export default function HomeElement() {
           </Typography>
         </Button>
       </Box>
-      <MouseImage className="mt-8 mt-auto" />
+      <MouseImage className="mt-8 md:mt-auto" />
     </Element>
   );
 }

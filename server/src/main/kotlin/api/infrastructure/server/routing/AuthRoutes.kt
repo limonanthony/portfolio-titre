@@ -2,15 +2,14 @@ package api.infrastructure.server.routing
 
 import api.adapters.dtos.BaseRequestDto
 import api.adapters.dtos.LoginDto
+import api.adapters.dtos.RefreshDto
 import api.adapters.dtos.RegisterDto
 import api.app.controllers.AuthController
 import api.infrastructure.server.utils.handleError
-import io.ktor.server.application.call
-import io.ktor.server.request.receive
-import io.ktor.server.response.respond
-import io.ktor.server.routing.Route
-import io.ktor.server.routing.post
-import io.ktor.server.routing.route
+import io.ktor.server.application.*
+import io.ktor.server.request.*
+import io.ktor.server.response.*
+import io.ktor.server.routing.*
 
 fun Route.authRoutes(
     authController: AuthController
@@ -34,7 +33,7 @@ fun Route.authRoutes(
 
         post("/refresh") {
             handleError(call) {
-                val body = receive<String>()
+                val body = receive<RefreshDto>()
                 val tokens = authController.refreshTokens(BaseRequestDto(null, body))
                 call.respond(tokens)
             }

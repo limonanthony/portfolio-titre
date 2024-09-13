@@ -7,12 +7,12 @@ import api.adapters.dtos.UserEditionDto
 import api.app.controllers.UserController
 import api.infrastructure.server.utils.getBearerToken
 import api.infrastructure.server.utils.handleError
-import io.ktor.http.HttpStatusCode
-import io.ktor.server.application.call
-import io.ktor.server.request.receive
-import io.ktor.server.response.respond
+import io.ktor.http.*
+import io.ktor.server.application.*
+import io.ktor.server.request.*
+import io.ktor.server.response.*
 import io.ktor.server.routing.*
-import java.util.UUID
+import java.util.*
 
 fun Route.userRoutes(
     userController: UserController
@@ -43,6 +43,16 @@ fun Route.userRoutes(
                 val id = UUID.fromString(parameters["id"])
                 userController.delete(BaseRequestDto(token, id))
                 call.respond(HttpStatusCode.NoContent)
+            }
+        }
+    }
+
+    route("/users") {
+        get {
+            handleError(call) {
+                val token = getBearerToken(request)
+                val users = userController.getAll(BaseRequestDto(token, Unit))
+                call.respond(HttpStatusCode.OK, users)
             }
         }
     }

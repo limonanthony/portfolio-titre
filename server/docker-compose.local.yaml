@@ -15,6 +15,13 @@ services:
       server /data --console-address ":9001"
     volumes:
       - s3-data:/data
+    healthcheck:
+      test: [ "CMD-SHELL", "mc ready local" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+
   db:
     image: postgres:16.4-alpine3.20
     ports:
@@ -25,6 +32,12 @@ services:
       POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
     volumes:
       - db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready", "-d", "${DATABASE_NAME}" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
 
 volumes:
   s3-data:

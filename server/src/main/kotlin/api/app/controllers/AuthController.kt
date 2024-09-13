@@ -2,6 +2,7 @@ package api.app.controllers
 
 import api.adapters.dtos.BaseRequestDto
 import api.adapters.dtos.LoginDto
+import api.adapters.dtos.RefreshDto
 import api.adapters.dtos.RegisterDto
 import api.adapters.presenters.TokensPresenter
 import api.app.abstract.CoroutineContext
@@ -18,7 +19,7 @@ class AuthController(
         return authService.register(request.payload)
     }
 
-    suspend fun refreshTokens(request: BaseRequestDto<String>): TokensPresenter {
-        return authService.refresh(request.payload)
+    suspend fun refreshTokens(request: BaseRequestDto<RefreshDto>): TokensPresenter {
+        return authService.refresh(request.payload.refreshToken)
     }
 }

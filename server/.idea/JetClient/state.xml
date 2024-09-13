@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JetClientState">
+    <option name="folders">
+      <list>
+        <folderState>
+          <option name="apis">
+            <list>
+              <integrationProperties>
+                <option name="name" value="API" />
+              </integrationProperties>
+            </list>
+          </option>
+          <option name="environmentGroups">
+            <list>
+              <environmentGroupState>
+                <option name="name" value="Default" />
+              </environmentGroupState>
+            </list>
+          </option>
+          <option name="folders">
+            <list>
+              <folderState>
+                <option name="auth">
+                  <authState>
+                    <option name="bearer">
+                      <nI>
+                        <option name="token" value="{{refresh_token}}" />
+                      </nI>
+                    </option>
+                    <option name="type" value="BEARER" />
+                  </authState>
+                </option>
+                <option name="folders">
+                  <list>
+                    <folderState>
+                      <option name="auth">
+                        <authState>
+                          <option name="bearer">
+                            <nI>
+                              <option name="token" value="{{access_token}}" />
+                            </nI>
+                          </option>
+                          <option name="type" value="BEARER" />
+                        </authState>
+                      </option>
+                      <option name="id" value="b85b11d2-3018-4aef-a19e-6fd3d86f4f8a" />
+                      <option name="name" value="Auth" />
+                      <option name="requests">
+                        <list>
+                          <requestState>
+                            <option name="body">
+                              <bodyState>
+                                <option name="raw" value="{&#10;  &quot;email&quot;: &quot;joe.mama@mail.com&quot;,&#10;  &quot;password&quot;: &quot;Pa$$w0rd!&quot;,&#10;  &quot;confirmPassword&quot;: &quot;Pa$$w0rd!&quot;,&#10;}" />
+                                <option name="type" value="JSON" />
+                              </bodyState>
+                            </option>
+                            <option name="id" value="8d8f3a0b-e96c-45eb-b78a-07365475904e" />
+                            <option name="method" value="POST" />
+                            <option name="name" value="Register" />
+                            <option name="sortWeight" value="1000000" />
+                            <option name="testScript" value="jc.test(&quot;Tokens to be there&quot;, () =&gt; {&#10;    jc.expect(jc.response.code).to.eq(200)&#10;    const body = jc.response.json()&#10;    const accessToken = body.accessToken&#10;    const refreshToken = body.refreshToken&#10;    if (accessToken) jc.globals.set(&quot;access_token&quot;, accessToken)&#10;    if (refreshToken) jc.globals.set(&quot;refresh_token&quot;, refreshToken)&#10;})" />
+                            <option name="url" value="{{url}}/register" />
+                          </requestState>
+                          <requestState>
+                            <option name="body">
+                              <bodyState>
+                                <option name="raw" value="{&#10;  &quot;email&quot;: &quot;joe.mama@mail.com&quot;,&#10;  &quot;password&quot;: &quot;Pa$$w0rd!&quot;,&#10;}" />
+                                <option name="type" value="JSON" />
+                              </bodyState>
+                            </option>
+                            <option name="id" value="c50332f0-ad20-45f0-bfdd-f4e36d4cda38" />
+                            <option name="method" value="POST" />
+                            <option name="name" value="Login" />
+                            <option name="sortWeight" value="2000000" />
+                            <option name="testScript" value="jc.test(&quot;Tokens to be there&quot;, () =&gt; {&#10;    jc.expect(jc.response.code).to.eq(200)&#10;    const body = jc.response.json()&#10;    const accessToken = body.accessToken&#10;    const refreshToken = body.refreshToken&#10;    if (accessToken) jc.globals.set(&quot;access_token&quot;, accessToken)&#10;    if (refreshToken) jc.globals.set(&quot;refresh_token&quot;, refreshToken)&#10;})" />
+                            <option name="url" value="{{url}}/login" />
+                          </requestState>
+                          <requestState>
+                            <option name="body">
+                              <bodyState>
+                                <option name="raw" value="{&#10;  &quot;refreshToken&quot;: &quot;{{refresh_token}}&quot;&#10;}" />
+                                <option name="type" value="JSON" />
+                              </bodyState>
+                            </option>
+                            <option name="id" value="9e4d29d3-be6a-4933-9400-96bbc0de8b06" />
+                            <option name="method" value="POST" />
+                            <option name="name" value="Refresh" />
+                            <option name="sortWeight" value="3000000" />
+                            <option name="testScript" value="jc.test(&quot;Tokens to be there&quot;, () =&gt; {&#10;    jc.expect(jc.response.code).to.eq(200)&#10;    const body = jc.response.json()&#10;    const accessToken = body.accessToken&#10;    const refreshToken = body.refreshToken&#10;    if (accessToken) jc.globals.set(&quot;access_token&quot;, accessToken)&#10;    if (refreshToken) jc.globals.set(&quot;refresh_token&quot;, refreshToken)&#10;})" />
+                            <option name="url" value="{{url}}/refresh" />
+                          </requestState>
+                        </list>
+                      </option>
+                      <option name="sortWeight" value="1000000" />
+                      <option name="variables">
+                        <variablesState>
+                          <option name="json" value="{&#10;  url: &quot;{{host}}/auth&quot;&#10;}" />
+                        </variablesState>
+                      </option>
+                    </folderState>
+                    <folderState>
+                      <option name="id" value="e267536d-d6f1-4128-8d06-c22563ae727f" />
+                      <option name="name" value="Projects" />
+                      <option name="sortWeight" value="2000000" />
+                    </folderState>
+                    <folderState>
+                      <option name="id" value="50952f82-3f91-4471-8e56-98436f12e53e" />
+                      <option name="name" value="Reviews" />
+                      <option name="requests">
+                        <list>
+                          <requestState>
+                            <option name="body">
+                              <bodyState>
+                                <option name="raw" value="{&#10;  &quot;authorId&quot;: null,&#10;  &quot;email&quot;: null,&#10;  &quot;content&quot;: &quot;Hello this is my review&quot;,&#10;  &quot;rating&quot;: 4&#10;}" />
+                                <option name="type" value="JSON" />
+                              </bodyState>
+                            </option>
+                            <option name="id" value="92171bea-adae-4f6d-b716-d452bd1d2cf9" />
+                            <option name="method" value="POST" />
+                            <option name="name" value="Create" />
+                            <option name="sortWeight" value="1000000" />
+                            <option name="url" value="{{url}}" />
+                          </requestState>
+                          <requestState>
+                            <option name="id" value="1b7437d2-0df6-4556-9801-d24adfcded42" />
+                            <option name="method" value="GET" />
+                            <option name="name" value="Get All" />
+                            <option name="sortWeight" value="2000000" />
+                            <option name="url" value="{{url}}s" />
+                          </requestState>
+                        </list>
+                      </option>
+                      <option name="sortWeight" value="3000000" />
+                      <option name="variables">
+                        <variablesState>
+                          <option name="json" value="{&#10;  url: &quot;{{host}}/review&quot;&#10;}" />
+                        </variablesState>
+                      </option>
+                    </folderState>
+                    <folderState>
+                      <option name="id" value="cf0d92e5-36f4-46b3-978d-ecac970d7e96" />
+                      <option name="name" value="Users" />
+                      <option name="requests">
+                        <list>
+                          <requestState>
+                            <option name="body">
+                              <bodyState>
+                                <option name="raw" value="{&#10;  &quot;email&quot;: &quot;joe.amam@mail.com&quot;,&#10;  &quot;password&quot;: &quot;helloit'sme&quot;&#10;}" />
+                                <option name="type" value="JSON" />
+                              </bodyState>
+                            </option>
+                            <option name="id" value="1d0325da-1edb-4adb-8070-778cbdd8c13b" />
+                            <option name="method" value="POST" />
+                            <option name="name" value="Create" />
+                            <option name="sortWeight" value="1000000" />
+                            <option name="url" value="{{url}}" />
+                          </requestState>
+                          <requestState>
+                            <option name="id" value="236c4ef4-aa22-4b1b-a858-f596e50641da" />
+                            <option name="method" value="GET" />
+                            <option name="name" value="Get All" />
+                            <option name="sortWeight" value="2000000" />
+                            <option name="url" value="{{url}}s" />
+                          </requestState>
+                          <requestState>
+                            <option name="id" value="42758153-7f68-4aac-90ad-a90b9f7a5297" />
+                            <option name="method" value="DELETE" />
+                            <option name="name" value="Delete" />
+                            <option name="pathVariables">
+                              <list>
+                                <pathVariableState>
+                                  <option name="key" value="id" />
+                                </pathVariableState>
+                              </list>
+                            </option>
+                            <option name="sortWeight" value="3000000" />
+                            <option name="url" value="{{url}}/{id}" />
+                          </requestState>
+                        </list>
+                      </option>
+                      <option name="sortWeight" value="4000000" />
+                      <option name="variables">
+                        <variablesState>
+                          <option name="json" value="{&#10;  url: &quot;{{host}}/user&quot;&#10;}" />
+                        </variablesState>
+                      </option>
+                    </folderState>
+                  </list>
+                </option>
+                <option name="id" value="a4c16d8a-2d61-40a4-8b1b-0aee4eed1528" />
+                <option name="name" value="Api" />
+                <option name="sortWeight" value="4000000" />
+              </folderState>
+            </list>
+          </option>
+          <option name="id" value="ec981283-f540-4601-ab02-ea43a50b17ba" />
+          <option name="name" value="Portfolio-Backend" />
+          <option name="selectedEnvironmentIds">
+            <map>
+              <entry key="default" />
+            </map>
+          </option>
+          <option name="syncProperties">
+            <synchronizationPropertiesState>
+              <option name="autoSync" value="true" />
+              <option name="folderPath" value="$PROJECT_DIR$/.jetclient" />
+            </synchronizationPropertiesState>
+          </option>
+          <option name="variables">
+            <variablesState>
+              <option name="json" value="{&#10;  globals: {&#10;    host: &quot;http://localhost:4242&quot;,&#10;  }&#10;}" />
+            </variablesState>
+          </option>
+        </folderState>
+      </list>
+    </option>
+    <option name="id" value="5596137f-78ba-4373-8c3f-129736a2c0de" />
+    <option name="version" value="3" />
+  </component>
+</project>

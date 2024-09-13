@@ -1,3 +1,6 @@
 package api.app.exceptions
 
-class InvalidCredentialsException : Exception("Invalid credentials.")
+import api.infrastructure.server.status.HttpStatusCode
+
+class InvalidCredentialsException :
+    ExceptionWithStatusCode("Invalid credentials.", httpStatusCode = HttpStatusCode.UNAUTHORIZED)

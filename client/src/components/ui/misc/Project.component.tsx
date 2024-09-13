@@ -4,11 +4,11 @@ import {
   Chip, IconButton, Tooltip, Typography,
 } from '@mui/material';
 import { ReactNode } from 'react';
-import Carousel from 'react-material-ui-carousel';
 
 import GithubIcon from '@/assets/icons/github-icon.svg?react';
 import WebIcon from '@/assets/icons/web-icon.svg?react';
 import ImageModal from '@/components/modals/Image.modal.tsx';
+import Carousel from '@/components/ui/carousel/Carousel.tsx';
 import { ChildrenProp } from '@/types/prop.types.ts';
 
 export interface ProjectImageProps {
@@ -60,7 +60,7 @@ export function ProjectImage({ alt, src }: ProjectImageProps) {
   const modal = useModal(ImageModal);
 
   return (
-    // eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-noninteractive-element-interactions
+  // eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-noninteractive-element-interactions
     <img
       alt={alt}
       className="m-auto size-96 cursor-pointer object-contain"
@@ -72,11 +72,10 @@ export function ProjectImage({ alt, src }: ProjectImageProps) {
 
 export function ProjectImages({ images }: { images: ProjectImageProps[] }) {
   return (
-    <Carousel animation="fade" autoPlay className="mb-4 h-full flex-1" navButtonsAlwaysInvisible>
-      {images.map(({ alt, src }) => (
-        <ProjectImage alt={alt} key={faker.string.uuid()} src={src} />
-      ))}
-    </Carousel>
+    <Carousel elements={images.map(({ alt, src }) => (
+      <ProjectImage alt={alt} key={faker.string.uuid()} src={src} />
+    ))}
+    />
   );
 }
 

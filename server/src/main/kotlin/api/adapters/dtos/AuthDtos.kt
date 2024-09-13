@@ -12,4 +12,10 @@ data class LoginDto(
 data class RegisterDto(
     val email: String,
     val password: String,
+    val confirmPassword: String,
+)
+
+@Serializable
+data class RefreshDto(
+    val refreshToken: String,
 )

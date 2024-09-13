@@ -1,3 +1,5 @@
 package api.app.exceptions
 
-class ValidationException : Exception("Error")
+import api.infrastructure.server.status.HttpStatusCode
+
+class ValidationException : ExceptionWithStatusCode("Error", httpStatusCode = HttpStatusCode.BAD_REQUEST)

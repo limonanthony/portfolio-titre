@@ -97,18 +97,18 @@ export default function AboutElement() {
   const cvRef = useRef<HTMLAnchorElement>(null);
 
   return (
-    <Element className="items-center gap-12" id={ElementId.About}>
+    <Element className="items-center gap-12 px-12" id={ElementId.About}>
       <ElementTitle>
         <FormattedMessage defaultMessage="About Me" />
       </ElementTitle>
-      <Typography className="max-w-screen-md px-4 text-center" variant="body1">
+      <Typography className="max-w-screen-md text-center" variant="body1">
         <FormattedMessage
           defaultMessage=" Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology "
           description="about me page presentation"
         />
       </Typography>
       <Box
-        className="lg:px16 flex w-full flex-1 flex-col gap-4 px-12 transition-all duration-300 md:gap-16 lg:flex-row xl:px-32"
+        className="lg:px16 flex w-full flex-1 flex-col gap-4 transition-all duration-300 md:gap-16 lg:flex-row xl:px-32"
       >
         <Box className="flex flex-1 flex-col gap-6">
           <Typography fontWeight="bold" variant="h5">

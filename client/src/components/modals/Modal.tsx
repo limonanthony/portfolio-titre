@@ -10,7 +10,8 @@ export interface BaseModalProps extends Partial<ClassNameProp>, ChildrenProp {
   onClose?: () => void;
 }
 
-export interface GenericModalProps extends ChildrenProp, Partial<ClassNameProp> {}
+export interface GenericModalProps extends ChildrenProp, Partial<ClassNameProp> {
+}
 
 export function ModalTitle({ children, className }: GenericModalProps) {
   return (
@@ -50,7 +51,7 @@ export function BaseModal(props: BaseModalProps) {
     <Modal onClose={onClose} open={isOpen}>
       <Paper
         className={ClassUtils.concat(
-          'absolute left-1/2 top-1/2 flex max-h-[80vh] max-w-full flex-1 -translate-x-1/2 -translate-y-1/2 flex-col md:w-[80vh]',
+          'absolute left-1/2 top-1/2 overflow-hidden flex md:max-h-[80vh] max-w-full flex-1 -translate-x-1/2 -translate-y-1/2 flex-col md:w-[80vw]',
           className,
         )}
       >

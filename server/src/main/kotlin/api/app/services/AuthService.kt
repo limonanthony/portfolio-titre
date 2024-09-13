@@ -60,7 +60,7 @@ class AuthService(
         if (!jwtService.verify(token)) {
             throw InvalidTokenException()
         }
-        
+
         val payload = jwtService.decode(token)
 
         try {

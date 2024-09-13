@@ -4,13 +4,13 @@ import api.adapters.dtos.BaseEditionRequestDto
 import api.adapters.dtos.BaseRequestDto
 import api.adapters.dtos.UserCreationDto
 import api.adapters.dtos.UserEditionDto
+import api.adapters.presenters.UserPresenter
 import api.app.abstract.CoroutineContext
-import api.app.entities.User
 import api.app.entities.enums.UserType
 import api.app.exceptions.UnauthorizedException
 import api.app.middlewares.TokenMiddleware
 import api.app.services.UserService
-import java.util.UUID
+import java.util.*
 
 class UserController(
     private val tokenMiddleware: TokenMiddleware,
@@ -26,9 +26,12 @@ class UserController(
             userService.edit(request.payload.id, request.payload.data)
         }
 
-    suspend fun getAll(): List<User> {
-        return userService.findAll()
-    }
+    suspend fun getAll(request: BaseRequestDto<Unit>): List<UserPresenter> =
+        tokenMiddleware.getAdmin(request.accessToken) {
+            userService.findAll().map {
+                UserPresenter.fromEntity(it)
+            }
+        }
 
     suspend fun delete(request: BaseRequestDto<UUID>) = tokenMiddleware.getUser(request.accessToken) {
         if (it.type != UserType.ADMIN && it.id != request.payload) throw UnauthorizedException()
