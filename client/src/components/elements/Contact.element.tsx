@@ -14,7 +14,8 @@ export default function ContactElement() {
 
   const { isPending, mutate } = useMutation({
     mutationFn: ReviewRequests.create,
-    onError: (error) => enqueueSnackbar(error.message ?? 'Une erreure est survenue', { variant: 'error' }),
+    onError: (error) => enqueueSnackbar(error.message ?? 'Une erreur est survenue', { variant: 'error' }),
+    onSuccess: () => enqueueSnackbar('Review sent. Thank you for the feedback !', { variant: 'success' }),
   });
 
   return (
