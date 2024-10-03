@@ -12,9 +12,11 @@ fun Application.configureHttp(env: Env) {
         allowHeader(HttpHeaders.ContentType)
         allowHeader(HttpHeaders.Accept)
 
+        allowMethod(HttpMethod.Options)
+
         HttpMethod.DefaultMethods.forEach { method ->
             allowMethod(method)
         }
-        anyHost()
+        allowHost("*")
     }
 }
