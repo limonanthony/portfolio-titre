@@ -12,3 +12,13 @@ services:
       - VITE_AUTHOR=${VITE_AUTHOR}
     ports:
       - "${PORT}:80"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.portfolio-client-router.rule=HostRegexp(`{subdomain:[a-zA-Z0-9-]+}.portfolio.limonanthony.dev`)"
+      - "traefik.http.routers.portfolio-client-router.entryPoints=https"
+      - "traefik.http.routers.portfolio-client-router.middlewares=gzip"
+      - "traefik.http.routers.portfolio-client-router.tls=true"
+      - "traefik.http.routers.portfolio-client-router.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.portfolio-client-router-http.rule=HostRegexp(`{subdomain:[a-zA-Z0-9-]+}.portfolio.limonanthony.dev`)"
+      - "traefik.http.routers.portfolio-client-router-http.entryPoints=http"
+      - "traefik.http.routers.portfolio-client-router-http.middlewares=redirect-to-https"
